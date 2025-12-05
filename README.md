@@ -45,17 +45,17 @@ Before you begin, ensure you have the following installed:
 
 ### 1. Clone or Download the Project
 
-```bash
+bash
 # If using Git
 git clone <your-repository-url>
 cd recipe_unit_normalizer
 
 # Or download and extract the ZIP file
-```
+
 
 ### 2. Create a Virtual Environment (Recommended)
 
-```bash
+bash
 # Windows
 python -m venv venv
 venv\Scripts\activate
@@ -63,13 +63,13 @@ venv\Scripts\activate
 # macOS/Linux
 python3 -m venv venv
 source venv/bin/activate
-```
+
 
 ### 3. Install Dependencies
 
-```bash
+bash
 pip install -r requirements.txt
-```
+
 
 The `requirements.txt` includes:
 - fastapi==0.104.1
@@ -84,20 +84,20 @@ The `requirements.txt` includes:
 
 Create a `.env` file in the project root directory:
 
-```bash
+bash
 # Windows
 copy .env.example .env
 
 # macOS/Linux
 cp .env.example .env
-```
+
 
 Edit the `.env` file and add your API keys:
 
-```env
+env
 GEMINI_API_KEY=your_google_gemini_api_key_here
 PEXELS_API_KEY=your_pexels_api_key_here
-```
+
 
 #### How to Get API Keys:
 
@@ -115,27 +115,26 @@ PEXELS_API_KEY=your_pexels_api_key_here
 
 ### 5. Run the Application
 
-```bash
+bash
 python app.py
-```
+
 
 The server will start on `http://localhost:8001`
 
 You should see output similar to:
-```
+
 INFO:     Started server process
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8001
-```
+
 
 ### 6. Access the Application
 
 Open your web browser and navigate to:
 
-```
 http://localhost:8001
-```
+
 
 ## 📖 Usage Guide
 
@@ -179,7 +178,6 @@ http://localhost:8001
 
 ## 📁 Project Structure
 
-```
 recipe_unit_normalizer/
 │
 ├── app.py                 # FastAPI backend server
@@ -190,7 +188,7 @@ recipe_unit_normalizer/
 ├── .env                   # Environment variables (create this)
 ├── .env.example          # Example environment file
 └── README.md             # This file
-```
+
 
 ## 🔧 Configuration
 
@@ -198,16 +196,15 @@ recipe_unit_normalizer/
 
 To change the server port, edit `app.py`:
 
-```python
+python
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8001)  # Change port here
-```
 
 ### CORS Settings
 
 CORS is configured to allow all origins. To restrict, edit in `app.py`:
 
-```python
+python
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:8001"],  # Specify allowed origins
@@ -215,7 +212,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-```
 
 ## 🐛 Troubleshooting
 
@@ -267,6 +263,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 For issues or questions, please open an issue on the repository or contact the maintainer.
 
----
-
 **Made with ❤️ and AI**
+# AI-kitchen
+it is for helping people across all our world to normalize the unites and also sharing recipe.
